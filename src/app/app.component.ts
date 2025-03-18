@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'plus';
+  public checked: boolean = false;
+
+  stateOptions: any[] = [{ label: 'Jour', value: 'day' },{ label: 'Mois', value: 'month' },{ label: 'Année', value: 'year' }];
+  public value: string = "month";
 }

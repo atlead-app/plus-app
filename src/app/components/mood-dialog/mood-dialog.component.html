@@ -1,0 +1,16 @@
+<p-dialog header="Comment allez-vous aujourd'hui ?" [draggable]="false" [modal]="true" [(visible)]="visible"
+    [style]="{ width: '30rem' }">
+    <div class="mood-dialog-wrapper">
+        <div class="mood-list">
+            <app-mood-picker mood="happy" label="Joyeux">🙂​</app-mood-picker>
+            <app-mood-picker mood="sad" label="Triste">😢</app-mood-picker>
+            <app-mood-picker mood="angry" label="Énervé">😡</app-mood-picker>
+            <app-mood-picker mood="excited" label="Excité">😄</app-mood-picker>
+            <app-mood-picker mood="relaxed" label="Relaxé">😌</app-mood-picker>
+        </div>
+        <div class="ask-again">
+            <p-toggleswitch [(ngModel)]="dontAskAgain" />
+            <span>Ne plus me demander</span>
+        </div>
+    </div>
+</p-dialog>

@@ -1,0 +1,47 @@
+.select-user-container {
+    width: 100%;
+    
+    .select-user-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        border-radius: .75rem;
+        padding: .5rem;
+
+        &:hover {
+            background-color: var(--p-surface-100);
+        }
+
+        .user-infos {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            .user-name {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            .user-description {
+                font-size: .75em;
+                color: var(--p-surface-500);
+            }
+        }
+
+        .user-dropdown {
+            font-size: .75rem;
+            color: var(--p-surface-500);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}

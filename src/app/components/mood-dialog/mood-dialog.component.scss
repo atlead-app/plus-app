@@ -1,0 +1,18 @@
+.mood-dialog-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .mood-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .ask-again {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+}

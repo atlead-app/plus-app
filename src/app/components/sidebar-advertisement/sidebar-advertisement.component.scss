@@ -1,0 +1,11 @@
+.sidebar-advertisement-container {
+    width: 100%;
+
+    .sidebar-advertisement-wrapper {
+        width: 100%;
+        height: 128px;
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: var(--p-surface-200);
+    }
+}
