@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseServicesComponent } from './components/base-services/base-services.component';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,27 @@ import { Component } from '@angular/core';
   standalone: false,
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  public checked: boolean = false;
+export class AppComponent extends BaseServicesComponent {
 
-  stateOptions: any[] = [{ label: 'Jour', value: 'day' },{ label: 'Mois', value: 'month' },{ label: 'Année', value: 'year' }];
-  public value: string = "month";
+  private readonly LAST_CONNECTION_KEY: string = 'last_connection';
+
+  public isFirstConnectionToday: boolean = true;
+
+  ngOnInit() {
+    this.lastConnection();
+  }
+
+  private lastConnection(): void {
+    let lastConnection: Date | null
+      = this.storageService.getLocalStorageItem<Date>(this.LAST_CONNECTION_KEY);
+    let now: Date = new Date();
+    if (lastConnection) {
+      lastConnection = new Date(lastConnection);
+      this.isFirstConnectionToday 
+        = !(lastConnection.getDate() === now.getDate() &&
+          lastConnection.getMonth() === now.getMonth() &&
+          lastConnection.getFullYear() === now.getFullYear());
+    }
+    this.storageService.setLocalStorageItem<Date>(this.LAST_CONNECTION_KEY, now);
+  }
 }

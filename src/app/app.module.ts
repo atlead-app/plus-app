@@ -29,6 +29,7 @@ import { UserAvatarComponent } from './components/user-avatar/user-avatar.compon
 import { SidebarAdvertisementComponent } from './components/sidebar-advertisement/sidebar-advertisement.component';
 import { MoodDialogComponent } from './components/mood-dialog/mood-dialog.component';
 import { MoodPickerComponent } from './components/mood-picker/mood-picker.component';
+import { BaseServicesComponent } from './components/base-services/base-services.component';
 
 @NgModule({
   declarations: [

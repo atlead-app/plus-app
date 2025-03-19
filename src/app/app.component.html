@@ -2,7 +2,7 @@
   <div class="app-wrapper">
     <app-sidebar />
     <div class="app-content">
-      <app-mood-dialog />
+      <app-mood-dialog *ngIf="isFirstConnectionToday"/>
       <router-outlet />
     </div>
   </div>
