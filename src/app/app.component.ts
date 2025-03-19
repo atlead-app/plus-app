@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BaseServicesComponent } from './components/base-services/base-services.component';
+import { BaseServices } from './components/base-services.component';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { BaseServicesComponent } from './components/base-services/base-services.
   standalone: false,
   styleUrl: './app.component.scss'
 })
-export class AppComponent extends BaseServicesComponent {
+export class AppComponent extends BaseServices {
 
   private readonly LAST_CONNECTION_KEY: string = 'last_connection';
 
