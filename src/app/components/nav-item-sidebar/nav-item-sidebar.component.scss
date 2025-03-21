@@ -1,0 +1,43 @@
+.nav-item-sidebar-container {
+    height: 40px;
+    width: 100%;
+
+    .nav-item-sidebar-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 1.25rem;
+        border-radius: .75rem;
+        color: var(--p-text-muted-color);
+        cursor: pointer;
+
+        &.active {
+            background-color: var(--p-primary-color);
+            color: var(--p-primary-contrast-color);
+        }
+
+        &:hover:not(.active) {
+            background-color: var(--p-surface-100);
+        }
+
+        i {
+            max-width: 14px;
+            min-width: 14px;
+            max-height: 14px;
+            min-height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.dropdown {
+                font-size: .75rem;
+            }
+        }
+
+        .navi-label {
+            flex: 1;
+        }
+    }
+}

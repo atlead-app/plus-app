@@ -1,0 +1,9 @@
+<div class="nav-item-sidebar-container">
+    <div class="nav-item-sidebar-wrapper" [routerLink]="item.link" routerLinkActive="active" >
+        <i [ngClass]="item.icon"></i>
+        <div class="navi-label">
+            {{ item.label }}
+        </div>
+        <i class="dropdown fa-solid fa-chevron-down" *ngIf="item.hasChilds()"></i>
+    </div>
+</div>

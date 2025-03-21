@@ -31,13 +31,13 @@
 
             .user-description {
                 font-size: .75em;
-                color: var(--p-surface-500);
+                color: var(--p-text-muted-color);
             }
         }
 
         .user-dropdown {
             font-size: .75rem;
-            color: var(--p-surface-500);
+            color: var(--p-text-muted-color);
             display: flex;
             flex-direction: column;
             align-items: center;

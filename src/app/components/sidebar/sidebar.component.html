@@ -1,9 +1,13 @@
 <div class="sidebar-container">
     <div class="sidebar-wrapper">
-        <div>
-
+        <div class="top-sidebar">
+            <div class="brand"></div>
+            <div class="nav-group">
+                <app-nav-item-sidebar class="nav-item" *ngFor="let item of navItems" [item]="item" />
+            </div>
         </div>
         <div class="bottom-sidebar">
+            <app-nav-item-sidebar [item]="paramsItem" />
             <app-sidebar-advertisement />
             <app-select-user />
         </div>

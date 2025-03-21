@@ -13,6 +13,24 @@
         overflow: hidden;
         background-color: var(--p-surface-50);
 
+        .top-sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            .brand {
+                height: 60px;
+            }
+
+            .nav-group {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+            }
+        }
+
         .bottom-sidebar {
             display: flex;
             flex-direction: column;

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import { preset } from './static/theme';
+import { preset } from './static/default';
 
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -29,6 +29,7 @@ import { UserAvatarComponent } from './components/user-avatar/user-avatar.compon
 import { SidebarAdvertisementComponent } from './components/sidebar-advertisement/sidebar-advertisement.component';
 import { MoodDialogComponent } from './components/mood-dialog/mood-dialog.component';
 import { MoodPickerComponent } from './components/mood-picker/mood-picker.component';
+import { NavItemSidebarComponent } from './components/nav-item-sidebar/nav-item-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MoodPickerComponent } from './components/mood-picker/mood-picker.compon
     UserAvatarComponent,
     SidebarAdvertisementComponent,
     MoodDialogComponent,
-    MoodPickerComponent
+    MoodPickerComponent,
+    NavItemSidebarComponent
   ],
   imports: [
     FormsModule,
