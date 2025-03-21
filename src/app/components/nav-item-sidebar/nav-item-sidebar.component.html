@@ -9,6 +9,6 @@
     </div>
 
     <div *ngIf="isOpen && item.hasChildren()" class="nav-subitem-sidebar-wrapper">
-        <app-nav-item-sidebar *ngFor="let child of item.children" [item]="child" [parentLink]="item.link" />
+        <app-nav-item-sidebar *ngFor="let child of item.children" [item]="child" [parentLink]="getLink()" />
     </div>
 </div>
