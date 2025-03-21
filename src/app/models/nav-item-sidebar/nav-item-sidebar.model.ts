@@ -2,16 +2,16 @@ export class NavItemSidebar {
     public icon!: string;
     public label!: string;
     public link!: string;
-    public childs?: NavItemSidebar[];
+    public children?: NavItemSidebar[];
 
-    constructor(icon: string, label: string, link: string, childs?: NavItemSidebar[]) {
+    constructor(icon: string, label: string, link: string, children?: NavItemSidebar[]) {
         this.icon = icon;
         this.label = label;
         this.link = link;
-        this.childs = childs;
+        this.children = children;
     }
 
-    public hasChilds(): boolean {
-        return this.childs?.length! > 0;
+    public hasChildren(): boolean {
+        return this.children?.length! > 0;
     }
 }

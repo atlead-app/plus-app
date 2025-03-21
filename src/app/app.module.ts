@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import { preset } from './static/default';
@@ -14,6 +14,12 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { DialogModule } from 'primeng/dialog';
 import { TooltipModule } from 'primeng/tooltip';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+import { InputIcon } from 'primeng/inputicon';
+import { IconField } from 'primeng/iconfield';
+import { InputTextModule } from 'primeng/inputtext';
+import { TextareaModule } from 'primeng/textarea';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +36,13 @@ import { SidebarAdvertisementComponent } from './components/sidebar-advertisemen
 import { MoodDialogComponent } from './components/mood-dialog/mood-dialog.component';
 import { MoodPickerComponent } from './components/mood-picker/mood-picker.component';
 import { NavItemSidebarComponent } from './components/nav-item-sidebar/nav-item-sidebar.component';
+import { MessagesListComponent } from './components/messages-list/messages-list.component';
+import { MessagesChatComponent } from './components/messages-chat/messages-chat.component';
+import { MessagesInfosComponent } from './components/messages-infos/messages-infos.component';
+import { MessagesItemListComponent } from './components/messages-item-list/messages-item-list.component';
+import { MessagesChatHeaderComponent } from './components/messages-chat-header/messages-chat-header.component';
+import { MessagesChatBodyComponent } from './components/messages-chat-body/messages-chat-body.component';
+import { MessagesChatFooterComponent } from './components/messages-chat-footer/messages-chat-footer.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +59,14 @@ import { NavItemSidebarComponent } from './components/nav-item-sidebar/nav-item-
     SidebarAdvertisementComponent,
     MoodDialogComponent,
     MoodPickerComponent,
-    NavItemSidebarComponent
+    NavItemSidebarComponent,
+    MessagesListComponent,
+    MessagesChatComponent,
+    MessagesInfosComponent,
+    MessagesItemListComponent,
+    MessagesChatHeaderComponent,
+    MessagesChatBodyComponent,
+    MessagesChatFooterComponent
   ],
   imports: [
     FormsModule,
@@ -60,7 +80,13 @@ import { NavItemSidebarComponent } from './components/nav-item-sidebar/nav-item-
     AvatarGroupModule,
     DialogModule,
     TooltipModule,
-    ToggleSwitchModule
+    ToggleSwitchModule,
+    IconFieldModule,
+    InputIconModule,
+    InputIcon,
+    IconField,
+    InputTextModule,
+    TextareaModule
   ],
   providers: [
     provideAnimationsAsync(),
@@ -75,6 +101,7 @@ import { NavItemSidebarComponent } from './components/nav-item-sidebar/nav-item-
       }
     })
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

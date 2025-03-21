@@ -10,14 +10,20 @@ import { NavItemSidebar } from '../../models/nav-item-sidebar/nav-item-sidebar.m
 export class SidebarComponent {
 
   public navItems: NavItemSidebar[] = [
-    new NavItemSidebar('fa-solid fa-chart-line', 'Dashboard', '/dashboard'),
-    new NavItemSidebar('fa-regular fa-message', 'Messages', '/messages'),
-    new NavItemSidebar('fa-regular fa-user', 'Clients', '/customers'),
-    new NavItemSidebar('fa-regular fa-wallet', 'Portefeuille', '/wallet', [
+    new NavItemSidebar('pi pi-chart-line', 'Dashboard', '/dashboard'),
+    new NavItemSidebar('pi pi-comment', 'Messages', '/messages'),
+    new NavItemSidebar('pi pi-user', 'Clients', '/customers'),
+    new NavItemSidebar('pi pi-sparkles', 'Assistant', '/assistant'),
+    new NavItemSidebar('pi pi-wallet', 'Portefeuille', '/wallet', [
       new NavItemSidebar('', 'Factures', '/invoices')
+    ]),
+    new NavItemSidebar('pi pi-building', 'Organisations', '/organizations', [
+      new NavItemSidebar('', 'Atlead', '/1'),
+      new NavItemSidebar('', 'Mypulse', '/2'),
+      new NavItemSidebar('', 'Movida', '/3'),
     ]),
   ];
 
-  public paramsItem: NavItemSidebar = new NavItemSidebar('fa-solid fa-gear', 'Paramètres', '/settings');
+  public paramsItem: NavItemSidebar = new NavItemSidebar('pi pi-cog', 'Paramètres', '/settings');
 
 }

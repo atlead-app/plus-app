@@ -1,9 +1,14 @@
 <div class="nav-item-sidebar-container">
-    <div class="nav-item-sidebar-wrapper" [routerLink]="item.link" routerLinkActive="active" >
+    <div class="nav-item-sidebar-wrapper" (click)="toggleDropdown()"
+        [routerLink]="!item.hasChildren() ? getLink() : null" routerLinkActive="active">
         <i [ngClass]="item.icon"></i>
         <div class="navi-label">
             {{ item.label }}
         </div>
-        <i class="dropdown fa-solid fa-chevron-down" *ngIf="item.hasChilds()"></i>
+        <i class="dropdown fa-solid fa-chevron-down" *ngIf="item.hasChildren()" [class.open]="isOpen"></i>
+    </div>
+
+    <div *ngIf="isOpen && item.hasChildren()" class="nav-subitem-sidebar-wrapper">
+        <app-nav-item-sidebar *ngFor="let child of item.children" [item]="child" [parentLink]="item.link" />
     </div>
 </div>

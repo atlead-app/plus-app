@@ -1,0 +1,27 @@
+.messages-container {
+    height: 100%;
+    width: 100%;
+
+    .messages-wrapper {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        border-radius: 1rem;
+        border: 1px solid var(--p-content-border-color);
+        overflow: hidden;
+
+        app-messages-list,
+        app-messages-infos {
+            height: 100%;
+            width: 400px;
+        }
+
+        app-messages-chat {
+            height: 100%;
+            flex: 1;
+            border-left: 1px solid var(--p-content-border-color);
+            border-right: 1px solid var(--p-content-border-color);
+        }
+    }
+}

@@ -10,5 +10,16 @@ import { NavItemSidebar } from '../../models/nav-item-sidebar/nav-item-sidebar.m
 export class NavItemSidebarComponent {
 
   @Input({ required: true }) public item!: NavItemSidebar;
+  @Input() public parentLink?: string;
+
+  public isOpen = false;
+
+  toggleDropdown(): void {
+    this.isOpen = !this.isOpen;
+  }
+
+  getLink(): string {
+    return this.parentLink ? `${this.parentLink}${this.item.link}` : this.item.link;
+  }
 
 }

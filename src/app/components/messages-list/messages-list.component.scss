@@ -1,0 +1,32 @@
+.messages-list-container {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+
+    .messages-list-wrapper {
+        height: 100%;
+        width: 100%;
+
+        .messages-list-header {
+            width: 100%;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            position: sticky !important;
+            top: 0;
+            background-color: var(--p-surface-0);
+
+            .header-tilte {
+                color: var(--p-surface-600);
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+
+        .messages-list-group {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

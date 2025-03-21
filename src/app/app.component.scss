@@ -9,8 +9,9 @@
         gap: 1.5rem;
         padding: 1.5rem;
 
-        >* {
-            flex: 1;
+        .app-content {
+            width: calc(100% - var(--sidebar-width));
+            max-width: calc(100% - var(--sidebar-width));
         }
     }
 }
