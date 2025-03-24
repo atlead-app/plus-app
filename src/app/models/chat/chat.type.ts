@@ -1,0 +1,1 @@
+export type TypeChat = null | 'contact' | 'group';

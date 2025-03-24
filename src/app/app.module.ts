@@ -95,7 +95,7 @@ import { MessagesChatFooterComponent } from './components/messages-chat-footer/m
         preset: preset,
         options: {
           prefix: 'p',
-          darkModeSelector: 'light',
+          darkModeSelector: false,
           cssLayer: false
         }
       }

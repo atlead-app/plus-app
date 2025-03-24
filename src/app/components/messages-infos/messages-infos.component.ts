@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './messages-infos.component.scss'
 })
 export class MessagesInfosComponent {
-
+  public infosMediasMessages: string = 'medias';
+  public mediasOptionsMessages: any[] = [
+    { label: 'Medias', value: 'medias' },
+    { label: 'Liens', value: 'links' },
+    { label: 'Docs', value: 'docs' }
+  ];
 }

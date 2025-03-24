@@ -1,1 +1,52 @@
-<p>messages-infos works!</p>
+<div class="messages-infos-container">
+    <div class="messages-infos-wrapper">
+        <div class="messages-infos-header">
+            <app-user-avatar size="100px" />
+            <div class="header-chat-infos">
+                <div class="header-chat-name">Thomas Lemaire</div>
+                <div class="header-chat-id">{{ '@thomas.lmre' }}</div>
+            </div>
+            <div class="header-actions">
+                <p-button icon="pi pi-sign-out" [text]="true" severity="secondary" />
+                <p-button icon="pi pi-info-circle" [text]="true" severity="secondary" />
+                <p-button icon="pi pi-ellipsis-v" [text]="true" severity="secondary" />
+            </div>
+        </div>
+        <div class="messages-infos-params">
+            <div class="item-params">
+                <div class="label">
+                    <i class="pi pi-bell"></i>
+                    Notifications
+                </div>
+                <p-toggleswitch />
+            </div>
+            <div class="item-params">
+                <div class="label">
+                    <i class="pi pi-volume-up"></i>
+                    Sons
+                </div>
+                <p-toggleswitch />
+            </div>
+            <div class="item-params">
+                <div class="label">
+                    <i class="pi pi-eye"></i>
+                    Lire les messages
+                </div>
+                <p-toggleswitch />
+            </div>
+        </div>
+        <div class="messages-infos-members">
+            <div class="section-title">
+                Membres
+                <p-button label="Tout voir" [text]="true" />
+            </div>
+            <div class="list-members">
+                <div class="member-item"></div>
+            </div>
+        </div>
+        <div class="messages-infos-medias">
+            <p-selectbutton styleClass="selectbutton-100" [options]="mediasOptionsMessages" [(ngModel)]="infosMediasMessages"
+                [allowEmpty]="false" optionLabel="label" optionValue="value" />
+        </div>
+    </div>
+</div>

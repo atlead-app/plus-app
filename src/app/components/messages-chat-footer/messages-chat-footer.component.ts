@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './messages-chat-footer.component.scss'
 })
 export class MessagesChatFooterComponent {
+  
+  public message: string = '';
 
+  public sendMessage(): void {
+    console.log(this.message);
+    this.message = '';
+  }
 }

@@ -1,11 +1,8 @@
 <div class="messages-chat-footer-container">
     <div class="messages-chat-footer-wrapper">
-        <i class="pi pi-face-smile" pTooltip="Ajouter un emoji" tooltipPosition="top"></i>
-        <i class="pi pi-paperclip" pTooltip="Attacher un document" tooltipPosition="top"></i>
-        <textarea rows="1" pTextarea [fluid]="true" [autoResize]="true" placeholder="Écrire un message"></textarea>
-        <div class="messages-chat-footer-send">
-            <div>Envoyer</div>
-            <i class="pi pi-send"></i>
-        </div>
+        <p-button icon="pi pi-face-smile" [text]="true" pTooltip="Ajouter un emoji" tooltipPosition="top" />
+        <p-button icon="pi pi-paperclip" [text]="true" pTooltip="Attacher un document" tooltipPosition="top" />
+        <textarea rows="1" pTextarea [fluid]="true" [autoResize]="true" placeholder="Écrire un message" [(ngModel)]="message"></textarea>
+        <p-button label="Envoyer" icon="pi pi-send" [disabled]="message.length === 0"/>
     </div>
 </div>

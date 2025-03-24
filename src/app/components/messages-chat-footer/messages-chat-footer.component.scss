@@ -22,17 +22,5 @@
         textarea {
             max-height: 128px;
         }
-
-        .messages-chat-footer-send {
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            background-color: var(--p-primary-color);
-            color: var(--p-primary-contrast-color);
-            padding: .5rem 1rem;
-            border-radius: .5rem;
-            cursor: pointer;
-            user-select: none;
-        }
     }
 }

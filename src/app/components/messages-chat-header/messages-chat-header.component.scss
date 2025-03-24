@@ -37,17 +37,6 @@
             display: flex;
             align-items: center;
             gap: .5rem;
-
-            i {
-                padding: .75rem;
-                border-radius: .5rem;
-                color: var(--p-primary-color);
-                cursor: pointer;
-
-                &:hover {
-                    background-color: var(--p-surface-50);
-                }
-            }
         }
     }
 }

@@ -58,3 +58,11 @@ app-sidebar {
 app-sidebar-advertisement {
     width: 100%;
 }
+
+.selectbutton-100 {
+    flex: 1 !important;
+
+    button {
+        width: 100% !important;
+    }
+}

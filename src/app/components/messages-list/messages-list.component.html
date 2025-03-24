@@ -1,14 +1,21 @@
 <div class="messages-list-container">
     <div class="messages-list-wrapper">
         <div class="messages-list-header">
-            <div class="header-tilte">Messages</div>
+            <div class="top">
+                <div class="header-tilte">Messages</div>
+                <p-button icon="pi pi-plus" [text]="true" />
+            </div>
             <p-iconfield>
                 <p-inputicon styleClass="pi pi-search" />
-                <input type="text" [fluid]="true" pInputText placeholder="Rechercher" />
+                <input type="text" [(ngModel)]="searchChat" [fluid]="true" pInputText placeholder="Rechercher" />
+                <p-inputicon [style]="{ 'cursor': 'pointer' }" styleClass="pi pi-times" *ngIf="searchChat.length > 0"
+                    (click)="resetSearchChat()" />
             </p-iconfield>
+            <p-selectbutton styleClass="selectbutton-100" [options]="listOptionsMessages" [(ngModel)]="listTypeMessages"
+                [allowEmpty]="false" optionLabel="label" optionValue="value" />
         </div>
         <div class="messages-list-group">
-            <app-messages-item-list *ngFor="let messages of messages"/>
+            <app-messages-item-list *ngFor="let chat of filterChats()" [chat]="chat" />
         </div>
     </div>
 </div>

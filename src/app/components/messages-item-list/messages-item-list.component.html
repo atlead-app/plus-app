@@ -1,12 +1,12 @@
 <div class="messages-item-list-container">
-    <div class="messages-item-list-wrapper">
+    <div class="messages-item-list-wrapper" routerLink="/messages/{{ chat.getId() }}" routerLinkActive="selected">
         <p-avatar size="large" icon="pi pi-user" shape="circle"></p-avatar>
         <div class="ilist-infos-content">
             <div class="content-section">
                 <div class="ilist-infos-title">
-                    John Doe
+                    {{ chat.getName() }}
                 </div>
-                <div class="ilist-infos-date">12.30</div>
+                <div class="ilist-infos-date">12:30</div>
             </div>
             <div class="content-section">
                 <div class="ilist-infos-message">
