@@ -3,6 +3,8 @@
     <app-sidebar />
     <div class="app-content">
       <app-mood-dialog *ngIf="isFirstConnectionToday"/>
+      <p-toast />
+      <p-confirmpopup />
       <router-outlet />
     </div>
   </div>

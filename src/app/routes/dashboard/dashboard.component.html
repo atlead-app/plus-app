@@ -2,7 +2,9 @@
     <div class="dashboard-wrapper">
         <app-header />
         <div class="dashboard-content">
-
+            <div class="dashboard-content-resize">
+                <gridstack [options]="gridstackOptions" (changeCB)="onGridstackChange($event)" />
+            </div>
         </div>
     </div>
 </div>

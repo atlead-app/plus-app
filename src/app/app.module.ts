@@ -6,6 +6,8 @@ import { preset } from './static/default';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { GridstackModule, GridstackComponent } from 'gridstack/dist/angular';
+
 import { ButtonModule } from 'primeng/button';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { SelectButtonModule } from 'primeng/selectbutton';
@@ -20,6 +22,11 @@ import { InputIcon } from 'primeng/inputicon';
 import { IconField } from 'primeng/iconfield';
 import { InputTextModule } from 'primeng/inputtext';
 import { TextareaModule } from 'primeng/textarea';
+import { MenuModule } from 'primeng/menu';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { ToastModule } from 'primeng/toast';
+
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +50,7 @@ import { MessagesItemListComponent } from './components/messages-item-list/messa
 import { MessagesChatHeaderComponent } from './components/messages-chat-header/messages-chat-header.component';
 import { MessagesChatBodyComponent } from './components/messages-chat-body/messages-chat-body.component';
 import { MessagesChatFooterComponent } from './components/messages-chat-footer/messages-chat-footer.component';
+import { BaseGridstackItemComponent } from './components/base-gridstack-item/base-gridstack-item.component';
 
 @NgModule({
   declarations: [
@@ -66,12 +74,15 @@ import { MessagesChatFooterComponent } from './components/messages-chat-footer/m
     MessagesItemListComponent,
     MessagesChatHeaderComponent,
     MessagesChatBodyComponent,
-    MessagesChatFooterComponent
+    MessagesChatFooterComponent,
+    BaseGridstackItemComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
+
+    GridstackModule,
 
     ButtonModule,
     ToggleButtonModule,
@@ -86,7 +97,10 @@ import { MessagesChatFooterComponent } from './components/messages-chat-footer/m
     InputIcon,
     IconField,
     InputTextModule,
-    TextareaModule
+    TextareaModule,
+    MenuModule,
+    ConfirmPopupModule,
+    ToastModule
   ],
   providers: [
     provideAnimationsAsync(),
@@ -99,9 +113,15 @@ import { MessagesChatFooterComponent } from './components/messages-chat-footer/m
           cssLayer: false
         }
       }
-    })
+    }),
+    ConfirmationService,
+    MessageService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    GridstackComponent.addComponentToSelectorType([BaseGridstackItemComponent]);
+  }
+}
