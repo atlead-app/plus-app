@@ -1,0 +1,8 @@
+@if (widget.header.visible) {
+<div class="widget-header-container">
+    <div class="widget-header-wrapper">
+        <div class="widget-title">{{ widget.name }}</div>
+        <app-widget-header-options [header]="widget.header" />
+    </div>
+</div>
+}

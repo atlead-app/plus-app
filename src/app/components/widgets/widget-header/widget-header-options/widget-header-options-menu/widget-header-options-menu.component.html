@@ -1,0 +1,6 @@
+<div class="widget-header-options-menu-container">
+    <div class="widget-header-options-menu-wrapper">
+        <p-menu #mainMenu [model]="items" [popup]="true" appendTo="body" />
+        <p-button (click)="mainMenu.toggle($event)" icon="pi pi-ellipsis-h" [text]="true" severity="secondary" />
+    </div>
+</div>

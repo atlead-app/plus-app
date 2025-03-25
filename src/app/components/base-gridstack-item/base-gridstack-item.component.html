@@ -1,10 +1,5 @@
 <div class="base-gridstack-item-container">
     <div class="base-gridstack-item-wrapper">
-        <div class="gridstack-item-header">
-            <div class="header-title">{{ data }}</div>
-            <p-menu #menu [model]="items" [popup]="true" appendTo="body" />
-            <p-button (click)="menu.toggle($event)" icon="pi pi-ellipsis-h" [text]="true" severity="secondary" />
-        </div>
-        <p>base-gridstack-item works!</p>
+        <app-widget-header [widget]="widget"></app-widget-header>
     </div>
 </div>

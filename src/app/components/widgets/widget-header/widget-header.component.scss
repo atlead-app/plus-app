@@ -1,0 +1,15 @@
+.widget-header-container {
+    width: 100%;
+
+    .widget-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .widget-title {
+            color: var(--p-text-color);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+    }
+}

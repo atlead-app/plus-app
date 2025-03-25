@@ -1,0 +1,11 @@
+<div class="widget-header-options-container">
+    <div class="widget-header-options-wrapper">
+        @if (header.select) {
+        <app-widget-header-options-select [options]="header.select.options" [selected]="header.select.selected" />
+        }
+        @if (header.datePicker) {
+            <p-datepicker selectionMode="range" [readonlyInput]="true" />
+        }
+        <app-widget-header-options-menu />
+    </div>
+</div>

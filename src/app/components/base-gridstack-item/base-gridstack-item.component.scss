@@ -11,18 +11,5 @@
         border-radius: 1rem;
         border: 1px solid var(--p-content-border-color);
         padding: 1.5rem;
-
-        .gridstack-item-header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .header-title {
-                color: var(--p-text-color);;
-                font-size: 1.25rem;
-                font-weight: 600;
-            }
-        }
     }
 }

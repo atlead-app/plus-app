@@ -25,6 +25,7 @@ import { TextareaModule } from 'primeng/textarea';
 import { MenuModule } from 'primeng/menu';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ToastModule } from 'primeng/toast';
+import { DatePickerModule } from 'primeng/datepicker';
 
 import { ConfirmationService, MessageService } from 'primeng/api';
 
@@ -52,6 +53,11 @@ import { MessagesChatBodyComponent } from './components/messages-chat-body/messa
 import { MessagesChatFooterComponent } from './components/messages-chat-footer/messages-chat-footer.component';
 import { BaseGridstackItemComponent } from './components/base-gridstack-item/base-gridstack-item.component';
 
+import { WidgetHeaderComponent } from './components/widgets/widget-header/widget-header.component';
+import { WidgetHeaderOptionsComponent } from './components/widgets/widget-header/widget-header-options/widget-header-options.component';
+import { WidgetHeaderOptionsSelectComponent } from './components/widgets/widget-header/widget-header-options/widget-header-options-select/widget-header-options-select.component';
+import { WidgetHeaderOptionsMenuComponent } from './components/widgets/widget-header/widget-header-options/widget-header-options-menu/widget-header-options-menu.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +81,12 @@ import { BaseGridstackItemComponent } from './components/base-gridstack-item/bas
     MessagesChatHeaderComponent,
     MessagesChatBodyComponent,
     MessagesChatFooterComponent,
-    BaseGridstackItemComponent
+    BaseGridstackItemComponent,
+
+    WidgetHeaderComponent,
+    WidgetHeaderOptionsComponent,
+    WidgetHeaderOptionsSelectComponent,
+    WidgetHeaderOptionsMenuComponent
   ],
   imports: [
     FormsModule,
@@ -100,7 +111,8 @@ import { BaseGridstackItemComponent } from './components/base-gridstack-item/bas
     TextareaModule,
     MenuModule,
     ConfirmPopupModule,
-    ToastModule
+    ToastModule,
+    DatePickerModule
   ],
   providers: [
     provideAnimationsAsync(),

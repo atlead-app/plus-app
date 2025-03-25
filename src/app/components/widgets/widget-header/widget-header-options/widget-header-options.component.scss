@@ -1,0 +1,9 @@
+.widget-header-options-container {
+    width: 100%;
+
+    .widget-header-options-wrapper {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+    }
+}
